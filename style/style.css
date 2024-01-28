@@ -1,0 +1,112 @@
+body {
+    background: #CED4DA;
+}
+
+main {
+    margin: 2%;
+}
+
+.logo {
+    position: absolute;
+    left: 5px;
+    top: 30px;
+}
+
+.contenedor li {
+    display: inline-block;
+    text-align: center;
+    width: 67%;
+    margin: 0 0.5%;
+    padding: 40px 12px;
+
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px 14px rgb(0, 0, 0);
+}
+
+.contenedor li:nth-child(2) {
+    display: inline-block;
+    width: 22%;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    vertical-align: top;
+}
+
+
+
+#mi-texarea {
+    background: #CED4DA;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+#mi-texarea::placeholder {
+    color: #000000;
+    bottom: 0;
+}
+
+
+.btn-primarios {
+    margin: 15px;
+    padding: 0;
+}
+
+input {
+    all: unset;
+}
+
+.encriptar {
+
+    margin-right: 70px;
+    padding: 15px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(94, 55, 55);
+    background: #CED4DA;
+    border: 2px solid #0A3871;
+    border-radius: 60px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.desencriptar {
+    margin-right: 70px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(94, 55, 55);
+    background: #CED4DA;
+    border: 2px solid #0A3871;
+    border-radius: 60px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+#mi-textocifrado {
+    background: #FFFFFF;
+    border: none;
+    resize: none;
+    outline: none;
+    margin: 8%;
+}
+
+.imagen2 {
+    width: 100%;
+}
+
+
+.btn-copiar {
+    margin-trim: 70px;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    background: #FFFFFF;
+    border: 2px solid #0A3871;
+    border-radius: 8px;
+    transition: 1s all;
+    cursor: pointer;
+
+}
