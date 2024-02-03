@@ -72,21 +72,17 @@ function leetDesencriptar(frase) {
     console.log(leerText);
 
     for (let i = 0; i < frase.length; i++) {
-        let palabra = '';
-        let j = i;
-        while (j < frase.length && frase[j] !== ' ') {
-            palabra += frase[j];
-            j++;
-        }
-        if (mapa.has(palabra.toLowerCase())) {
-            leerText += mapa.get(palabra.toLowerCase());
+        const caracter = frase.charAt(i);
+        console.log(`caractar  ${caracter}`);
+        let valor = mapa.get(caracter);
+        console.log(valor);
+        if (null != valor) {
+            leerText += valor;
         } else {
-            leerText += palabra;
-        }
-        if (j > i) {
-            i = j;
+            leerText += caracter;
         }
     }
+
     return leerText;
 }
 

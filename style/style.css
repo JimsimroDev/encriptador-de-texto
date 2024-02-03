@@ -163,6 +163,7 @@ footer {
     }
 
     .imagen2 {
+        display: block;
         position: absolute;
         top: 91%;
         left: 39%;
@@ -214,7 +215,7 @@ footer {
 
 
     .contenedor li:nth-child(2) {
-        width: auto;
+        width: 22em;
         height: 38em;
     }
 
