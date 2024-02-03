@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
     <title>encriptador-texto</title>
 </head>
 
@@ -21,19 +22,25 @@
                         required></textarea>
 
                     <div class="btn-primarios">
-                        <input id="btn-space" data-tooltip="Este es un botón" class="encriptar" type="submit"
-                            value="Encriptar Texto">
-                        <input id="btn-space" class="desencriptar" type="submit" value="Desencriptar Texto">
+                        <button onclick="encritado(); toggleImagen();" id="enpezar" data-tooltip="Este es un botón"
+                            class="style-botones" type="submit">Encriptar
+                            Texto</button>
+
+                        <button onclick="desencriptar(); toggleImagen();" id="reiniciar"
+                            class="style-botones">Desencriptar
+                            Texto</button>
                     </div>
                 </li>
 
                 <li>
-                    <textarea name="" id="mi-textocifrado" cols="38" rows="12"
-                        placeholder="Ningun Mensaje fue encotrado"></textarea>
-                    <img class="imagen2" src="img/Muñeco.png" alt="">
+
+                    <P id="texto-imagen"><img id="quitarImagen" class="imagen2" src="img/Muñeco.png" alt="">Ningun
+                        mensaje fue encontrado
+                    </P>
+                    <textarea name="" id="mi-textocifrado" cols="38" rows="26" placeholder=""></textarea>
 
                     <div class="btn-copiar">
-                        <input type="submit" value="Copiar">
+                        <button onclick="copiarTexto();">Copiar</button>
                     </div>
 
                 </li>
@@ -42,6 +49,11 @@
 
     </main>
 
+    <footer>
+        <p class="Copyright">&copy JimsimroDev - 2024</p>
+    </footer>
+    <script src="logica/funcionalidad.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>
