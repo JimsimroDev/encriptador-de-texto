@@ -18,10 +18,6 @@ main {
 .contenedor li {
     display: inline-block;
     text-align: center;
-
-
-
-
 }
 
 .contenedor li:nth-child(2) {
@@ -100,7 +96,7 @@ button {
 
 #mi-textocifrado {
     text-align: center;
-    color: #FFFFFF;
+    color: #000000;
     background: transparent;
     border: none;
     resize: none;
@@ -230,6 +226,7 @@ footer {
     .contenedor li:nth-child(2) {
         width: 22em;
         height: 38em;
+        margin-left: 9px;
     }
 
     .btn-primarios {
