@@ -1,6 +1,6 @@
 body {
     width: auto;
-    background: #CED4DA;
+    background: linear-gradient(to bottom, #4facfe, #0A3871);
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
@@ -18,34 +18,34 @@ main {
 .contenedor li {
     display: inline-block;
     text-align: center;
-    width: 67%;
-    margin: 0 0.5%;
-    padding: 40px 12px;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px 14px rgb(0, 0, 0);
+
+
+
+
 }
 
 .contenedor li:nth-child(2) {
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px 14px rgb(0, 0, 0);
     display: inline-block;
-    width: 28%;
+    width: 26%;
     height: 38em;
+    margin: 0 0.5%;
+    padding: 40px 12px;
     box-sizing: border-box;
-    background: #FFFFFF;
-    vertical-align: top;
 }
 
 .imagen2 {
     position: absolute;
     top: 22%;
-    left: 66%;
+    left: 60%;
     width: 30%;
     height: 50%;
 }
 
 
 #mi-texarea {
-    background: #CED4DA;
+    background-color: transparent;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
@@ -55,7 +55,7 @@ main {
 }
 
 #mi-texarea::placeholder {
-    color: #000000;
+    color: #ffffff;
 
 }
 
@@ -100,7 +100,8 @@ button {
 
 #mi-textocifrado {
     text-align: center;
-    background: #FFFFFF;
+    color: #FFFFFF;
+    background: transparent;
     border: none;
     resize: none;
     outline: none;
@@ -108,21 +109,36 @@ button {
     margin-top: -2px;
 }
 
+#mi-textocifrado::placeholder {
+    color: #FFFFFF;
+}
+
 .btn-copiar {
-    padding: 10px 0;
-    height: 26px;
+    color: #FFFFFF;
+    padding: 10px;
+    height: 22px;
     font-weight: bold;
     font-size: 22px;
-    background: #FFFFFF;
+    background: #174D8B;
     border: 2px solid #0A3871;
     border-radius: 8px;
+    transition: 0.6s all;
     cursor: pointer;
 }
 
+.btn-copiar:hover {
+    transform: scale(1.1);
+}
+
+.btn-copiar:active {
+    background: #CED4DA;
+}
+
 footer {
-    background: #7C8084;
+    background: linear-gradient(to bottom, #174D8B, #0A3871);
     padding: 40px;
     text-align: center;
+    color: #FFFFFF;
 }
 
 
@@ -137,8 +153,9 @@ footer {
 
     /* Estilos para tabletas */
     .logo {
-        top: 20px;
-        left: -20px;
+        position: absolute;
+        left: 5px;
+        top: 30px;
     }
 
     .contenedor li {
@@ -158,17 +175,13 @@ footer {
         height: 147px;
     }
 
-    img {
-        display: none;
-    }
-
     .imagen2 {
         display: block;
         position: absolute;
-        top: 91%;
+        top: 110%;
         left: 39%;
         width: 24%;
-        height: 22%;
+        height: 36%;
     }
 
     .style-botones {
