@@ -79,7 +79,7 @@ button {
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    background: #0A3871;
+    background: transparent;
     border: 2px solid #0A3871;
     border-radius: 60px;
     transition: 0.6s all;
@@ -115,7 +115,7 @@ button {
     height: 22px;
     font-weight: bold;
     font-size: 22px;
-    background: #174D8B;
+    background: transparent;
     border: 2px solid #0A3871;
     border-radius: 8px;
     transition: 0.6s all;

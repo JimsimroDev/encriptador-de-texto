@@ -27,10 +27,8 @@ function textEncriptar(frase) {
         let valor = mapa.get(caracter);
         if (valor != null) {
             leerText += valor;
-            console.log(leerText);
         } else {
             leerText += caracter;
-            console.log(leerText);
         }
     }
     leerText = leerText.toLowerCase();
@@ -47,14 +45,18 @@ function encritado() {
             title: '¡Hola!',
             text: 'El texto se encripto con exito.',
             icon: 'success',
-            confirmButtonText: '¡Entendido!'
+            position: 'top',
+            timer: 2000,
+            showConfirmButton: false
         });
     } else {
         Swal.fire({
             title: '¡Hola!',
             text: 'Debes Ingrsear un texto para ser encriptado.',
             icon: 'error',
-            confirmButtonText: '¡Entendido!'
+            position: 'top',
+            timer: 2000,
+            showConfirmButton: false
         });
     }
 
@@ -98,17 +100,22 @@ function desencriptar() {
         let fraseDesencriptada = textDesencriptar(frase);
         Swal.fire({
             title: '¡Hola!',
-            text: 'El texto se desencripto con exito.',
+            text: 'El texto se desencriptó con éxito.',
             icon: 'success',
-            confirmButtonText: '¡Entendido!'
+            position: 'top',
+            timer: 2000,
+            showConfirmButton: false
         });
+
         asignacionDeTextoEnTextarea('#mi-textocifrado', `${fraseDesencriptada}`);
     } else {
         Swal.fire({
             title: '¡Hola!',
             text: 'Debes Ingrsear un texto para ser desencriptado.',
             icon: 'error',
-            confirmButtonText: '¡Entendido!'
+            position: 'top',
+            timer: 2000,
+            showConfirmButton: false
         });
     }
 }
@@ -117,6 +124,7 @@ function copiarTexto() {
     let textoCopiado = document.getElementById('mi-textocifrado').value;
     navigator.clipboard.writeText(textoCopiado);
     alertaPersonalizada(textoCopiado);
+    document.getElementById('mi-textocifrado').value = '';
 
 }
 
@@ -126,14 +134,18 @@ function alertaPersonalizada(texto) {
             title: '¡Hola!',
             text: 'El texto se copio con exito.',
             icon: 'success',
-            confirmButtonText: '¡Entendido!'
+            position: 'top',
+            timer: 2000,
+            showConfirmButton: false
         });
     } else {
         Swal.fire({
             title: '¡Hola!',
             text: 'Tiene que ingresar el texto que desee copiar.',
             icon: 'error',
-            confirmButtonText: '¡Entendido!'
+            position: 'top',
+            timer: 2000,
+            showConfirmButton: false
         });
     }
 }
