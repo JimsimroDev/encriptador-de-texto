@@ -70,8 +70,6 @@ function textDesencriptar(frase) {
     mapa.set('ober', 'O');
     mapa.set('ufat', 'U');
 
-    console.log(leerText);
-
     let i = 0;
     while (i < frase.length) {
         let valor = null;
