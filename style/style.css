@@ -167,7 +167,7 @@ footer {
         width: 100%;
         height: 32em;
         margin-top: 6%;
-        margin-left: 10px;
+        margin-left: 0px;
     }
 
     #mi-textocifrado {
@@ -178,10 +178,10 @@ footer {
     .imagen2 {
         display: block;
         position: absolute;
-        top: 110%;
-        left: 39%;
-        width: 24%;
-        height: 36%;
+        top: 78%;
+        left: 38%;
+        width: 30%;
+        height: 31%;
     }
 
     .style-botones {
