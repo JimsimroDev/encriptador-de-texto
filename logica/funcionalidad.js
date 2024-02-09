@@ -10,7 +10,6 @@ function asignacionDeTextoEnTextarea(elemento, texto) {
     return;
 }
 
-
 asignacionDeTexto('#mi-textocifrado', 'Ingresa el texto que desee encriptar o desencriptar');
 
 function textEncriptar(frase) {
@@ -37,10 +36,16 @@ function textEncriptar(frase) {
 
 function encritado() {
     let frase = document.getElementById('mi-texarea').value;
+    if (/[A-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(frase)) {
+        let parrafo = document.getElementById('alert-js');
+        parrafo.style.color = 'red';
+        return;
+    }
+    let parrafo = document.getElementById('alert-js');
+    parrafo.style.color = 'white';
+    frase = frase.toUpperCase();
     if (frase != "") {
-        frase = frase.toUpperCase();
         let fraseEncriptada = textEncriptar(frase);
-        asignacionDeTextoEnTextarea('#mi-textocifrado', `${fraseEncriptada}`);
         Swal.fire({
             title: '¡Hola!',
             text: 'El texto se encripto con exito.',
@@ -49,6 +54,7 @@ function encritado() {
             timer: 2000,
             showConfirmButton: false
         });
+        asignacionDeTextoEnTextarea('#mi-textocifrado', `${fraseEncriptada}`);
     } else {
         Swal.fire({
             title: '¡Hola!',
@@ -96,7 +102,6 @@ function textDesencriptar(frase) {
 function desencriptar() {
     let frase = document.getElementById('mi-texarea').value;
     if (frase != "") {
-        frase = frase.toLowerCase();
         let fraseDesencriptada = textDesencriptar(frase);
         Swal.fire({
             title: '¡Hola!',

@@ -22,7 +22,7 @@ main {
 
 .contenedor li:nth-child(2) {
     border-radius: 10px;
-    box-shadow: 10px 10px 30px 14px rgb(0, 0, 0);
+    box-shadow: 10px 10px 30px 14px rgb(186, 85, 211);
     display: inline-block;
     width: 26%;
     height: 38em;
@@ -33,12 +33,11 @@ main {
 
 .imagen2 {
     position: absolute;
-    top: 22%;
-    left: 60%;
-    width: 30%;
-    height: 50%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    top: 24%;
 }
-
 
 #mi-texarea {
     background-color: transparent;
@@ -49,6 +48,7 @@ main {
     outline: none;
     resize: none;
 }
+
 
 #mi-texarea::placeholder {
     color: #ffffff;
@@ -66,6 +66,16 @@ main {
     padding: 0;
 }
 
+.alert {
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 60px;
+
+}
+
+.alert:before {
+    content: "❗";
+}
 
 
 button {
@@ -87,6 +97,7 @@ button {
 }
 
 .style-botones:hover {
+    background: rgb(186, 85, 211);
     transform: scale(1.1);
 }
 
@@ -123,6 +134,7 @@ button {
 }
 
 .btn-copiar:hover {
+    background: rgb(186, 85, 211);
     transform: scale(1.1);
 }
 
@@ -142,10 +154,18 @@ footer {
     font-weight: bold;
     font-size: 12px;
     margin: 20px;
+}
 
+@media screen and (max-width: 1360px) {
+    .imagen2 {
+        left: 34em;
+    }
 }
 
 @media screen and (max-width: 1024px) {
+    body {
+        width: auto;
+    }
 
     /* Estilos para tabletas */
     .logo {
@@ -185,6 +205,11 @@ footer {
 
     }
 
+    .alert {
+        height: 0;
+        margin-left: 3em;
+    }
+
     .btn-copiar {
         margin-top: 10em;
     }
@@ -196,6 +221,10 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        width: auto;
+    }
+
     main {
         width: auto;
         padding: 18px;
@@ -229,6 +258,11 @@ footer {
         margin-left: 9px;
     }
 
+    .alert {
+        height: 7px;
+        margin-left: 3em;
+    }
+
     .btn-primarios {
         margin-left: -16px;
         margin-top: -172px;
@@ -236,10 +270,10 @@ footer {
 
     .imagen2 {
         position: absolute;
-        top: 120%;
-        left: 39%;
-        width: 24%;
-        height: 22%;
+        top: 112%;
+        left: 31%;
+        width: 38%;
+        height: 28%;
     }
 
     #btn-space {
