@@ -7,51 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/19bf97408b.js" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
     <title>encriptador-texto</title>
 </head>
 
 <body>
+    <header>
+        <div class="caja">
+            <h1><img class="logo" src="img/Logo.png" alt="imagen del logo de la pagina"></h1>
+
+            <nav>
+                <ul class="navegacion">
+                    <li> <a class="icono1" href=""><i class="fa-brands fa-linkedin icono"></i></a>
+                    </li>
+                    <li><a class="icono1" href="https://github.com/JimsimroDev" target="_blank"><i
+                                class="fa-brands fa-github icono"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
 
     <main>
-        <h1><img class="logo" src="img/Logo.png" alt="imagen del logo de la pagina"></h1>
         <section class="principal">
+            <div class="primer-area">
+                <textarea name="mensaje" id="mi-texarea" cols="30" rows="15" placeholder="Ingrese el texto aquí"
+                    required></textarea>
 
-            <ul class="contenedor">
-                <li class="primer-area">
-                    <textarea name="mensaje" id="mi-texarea" cols="30" rows="15" placeholder="Ingrese el texto aquí"
-                        required></textarea>
+                <div class="btn-primarios">
+                    <p class="alert" id="alert-js"> <i class="fa-solid fa-circle-exclamation"></i> Solo letras
+                        minúsculas y sin acento
+                    </p>
 
-                    <div class="btn-primarios">
-                        <p class="alert" id="alert-js"> Solo letras minúsculas y sin acento
-                        </p>
+                    <button onclick="encritado(); toggleImagen();mostrarBtnCopiar();" id="enpezar"
+                        data-tooltip="Este es un botón" class="style-botones" type="submit">Encriptar
+                        Texto</button>
 
-                        <button onclick="encritado(); toggleImagen();" id="enpezar" data-tooltip="Este es un botón"
-                            class="style-botones" type="submit">Encriptar
-                            Texto</button>
+                    <button onclick="desencriptar(); toggleImagen(); mostrarBtnCopiar();" id="reiniciar"
+                        class="style-botones">Desencriptar
+                        Texto</button>
+                </div>
+            </div>
 
-                        <button onclick="desencriptar(); toggleImagen();" id="reiniciar"
-                            class="style-botones">Desencriptar
-                            Texto</button>
-                    </div>
-                </li>
-
-                <li>
-
-                    <P id="texto-imagen"><img id="quitarImagen" class="imagen2" src="img/Muñeco.png" alt="">Ningun
-                        mensaje fue encontrado
-                    </P>
-                    <textarea name="" id="mi-textocifrado" cols="38" rows="26" placeholder=""></textarea>
-                    <div class="btn-copiar">
-                        <button onclick="copiarTexto(); toggleImagen();">Copiar</button>
-                    </div>
-
-                </li>
-            </ul>
+            <li class="segunda-area">
+                <P id="texto-imagen">Ningun mensaje fue encontrado</P>
+                <textarea name="" id="mi-textocifrado" cols="38" rows="26" placeholder=""></textarea>
+                <div class="contenedor-imagen"><img id="quitarImagen" class="imagen2" src="img/Muñeco.png" alt=""></div>
+                <div class="btn-copiar" id="btn-copy">
+                    <button onclick="copiarTexto(); toggleImagen();mostrarBtnCopiar();">Copiar</button>
+            </li>
+            </div>
         </section>
-
     </main>
-
     <footer>
         <p class="Copyright">&copy JimsimroDev - 2024</p>
     </footer>

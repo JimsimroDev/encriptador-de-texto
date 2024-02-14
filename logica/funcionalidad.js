@@ -165,7 +165,18 @@ function toggleImagen() {
         texto.style.display = 'none'
 
     } else {
-        imagen.style.display = "block";
         texto.style.display = "block";
+        imagen.style.display = "block";
+    }
+}
+
+function mostrarBtnCopiar() {
+    let copiar = document.getElementById('mi-textocifrado');
+    let botonCopiar = document.getElementById('btn-copy');
+
+    if (copiar.value.trim() !== "") {
+        botonCopiar.style.display = 'block';
+    } else {
+        botonCopiar.style.display = 'none'; // Oculta el botón si no hay texto en el textarea
     }
 }
