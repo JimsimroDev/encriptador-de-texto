@@ -71,7 +71,6 @@ main {
     border-radius: 10px;
     box-shadow: 10px 10px 30px 14px rgb(186, 85, 211);
     display: inline-block;
-
     margin: 0 0.9%;
     padding: 40px 12px;
     box-sizing: border-box;
@@ -212,4 +211,10 @@ footer {
     font-weight: bold;
     font-size: 12px;
     margin: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        width: auto;
+    }
 }
