@@ -213,8 +213,44 @@ footer {
     margin: 20px;
 }
 
-@media screen and (max-width: 1024px) {
+@media (315px <=width <=1000px) {
     body {
         width: auto;
+    }
+
+    .principal {
+        height: 159vh;
+        margin: 0px;
+    }
+
+    .btn-primarios {
+        margin: -66px;
+    }
+
+    .segunda-area {
+        width: 44vh;
+        height: 34%;
+        margin-top: 70vh;
+        margin-left: -37vh;
+        margin-right: 9px;
+    }
+
+    .alert {
+        height: 30px;
+        margin-left: 5vh;
+    }
+
+    .style-botones {
+        margin-right: 1rem;
+        margin-left: 5rem;
+        padding: 14px 2px;
+    }
+
+    #empezar+#reiniciar {
+        margin-left: 10px;
+    }
+
+    .btn-copiar {
+        margin-top: -17vh;
     }
 }
